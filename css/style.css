@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.25)),
+    url('https://images.openai.com/static-rsc-4/e6nxV9t8MkAnyno4xLyUvHGFqsBfHNQrKPPqiFMRty7vuuDt67ZVnJGbPMZ72xJcU9EwjWfrDi-VRe18JDfavNK30XbPWmPczE4qnP9DBusNWMXYYWy3Gwl6UDrEooHksC8cS-zwARj7IQ0CZ8J_klzptnYkar9Qm-nlvwIiwIbATIw64MrwnSINxi_O8FNl?purpose=fullsize');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header{
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1{
+    font-family: 'Bangers', cursive;
+    font-size: 5rem;
+    color: #ff9800;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255,152,0,0.9);
+}
+
+header p{
+    color: #d8d8d8;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+#searchInput{
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    border: 2px solid #ff9800;
+    border-radius: 10px;
+    background-color: rgba(20,20,20,0.95);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+#searchInput:focus{
+    box-shadow: 0 0 20px rgba(255,152,0,0.9);
+}
+
+#characters-container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+.card{
+    background-color: rgba(15,15,15,0.95);
+    border: 2px solid #2c2c2c;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    border-color: #ff9800;
+    box-shadow: 0 0 25px rgba(255,152,0,0.8);
+}
+
+.card img{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background-color: #111;
+    border-bottom: 2px solid #ff9800;
+    padding: 10px;
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.card h2{
+    font-family: 'Bangers', cursive;
+    color: #ff9800;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.card p{
+    margin-bottom: 10px;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* pra deixar mais responsivo */
+
+@media(max-width: 768px){
+
+    header h1{
+        font-size: 3.2rem;
+    }
+
+    header p{
+        font-size: 1rem;
+    }
+
+    #searchInput{
+        width: 90%;
+    }
+
+    .card img{
+        height: 300px;
+    }
+
+}
